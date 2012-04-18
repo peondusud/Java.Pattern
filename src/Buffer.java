@@ -105,6 +105,7 @@ public class Buffer implements Isujet,Ibuffer{
 	public void undo() {
 		
 		try{
+		care.addState(new String(str));
 		restoreState(care.previous());
 		}
 		catch(Exception e){
@@ -121,14 +122,10 @@ public class Buffer implements Isujet,Ibuffer{
 	}
 	
 	public void notify_Obs() {
-   	/* Iterator<Iobserver> itr = this.arr_Obs.iterator();
-   	    while (itr.hasNext()) {
-   	    itr.next().update(this);    	    	
-   	    }	*/
    	 for (int i =0; i < arr_Obs.size(); i++)
-   	 {
+   	 	{
    		 arr_Obs.get(i).update(this);
-   	 }
+   	 	}
 	}
 
 	

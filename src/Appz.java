@@ -24,6 +24,9 @@ public class Appz {
 		copy.execute();//
 		buff.selection.select(2,2);//
 		coller.execute();
+		coller.execute();
+		coller.execute();
+		coller.execute();
 		 
 		 Scanner in = new Scanner(System.in);
 		 String name;

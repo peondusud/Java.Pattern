@@ -11,11 +11,13 @@ public class Caretaker {
 	
 	@SuppressWarnings("unchecked")
 	public void addState(Object o){	
-		
+		if (status+1==arrayStates.size()){
 		arrayStates.add( o );
+		}
+		else{
+			//arrayStates.add(status+1,o);			//bug
+		}		
 		status=index(o);
-		//reecrecrire par dessus
-		
 	}
 	
 	public Object getState( int i){		
@@ -26,39 +28,37 @@ public class Caretaker {
 	public int index(Object t){
 	int i=0;
    	Iterator<Object> itr = this.arrayStates.iterator();
-   	 	while (itr.hasNext()) {
-    	
-   	 		if(itr.next().equals(t)){        	    		
+   	 	while (itr.hasNext()) {    	
+   	 		if(itr.next().equals(t))       	    		
    	 			return i;				//ca match indice array -1
-   	 		} 
    	 		i++;
    	 	}
 	return -1;
 	}
 	
-	public Object previous() throws Exception {
-		
-		if(status>=0){		//status positif
-			status=status-1;
-		return arrayStates.get(status+1);
-		
+	public Object previous() throws Exception {		
+		int tmp =status-1;	
+		if(status>0){		//status positif
+			status=tmp;
+			return arrayStates.get(status);		
+		}		
+		else{
+			status=0;
+			return arrayStates.get(status);
 		}
-		
-		throw new Exception();
-		}
+	}
 	
-	public Object  next() throws Exception{		
-		
-	
-		if(status+1<arrayStates.size()){
-			status=status+1;
-		return arrayStates.get(status);
-		
+	public Object  next() throws Exception{			
+		int tmp =status+1;	
+		if(tmp<arrayStates.size() && tmp>=0){
+			status=tmp;
+			return arrayStates.get(tmp);		
 		}
-		
-		throw new Exception();
-		
+		else{
+			status=arrayStates.size()-1;
+			return arrayStates.get(tmp);
 		}
+	}
 	
 	
 }
