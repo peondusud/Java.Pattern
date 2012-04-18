@@ -24,21 +24,21 @@ public class Caretaker {
 	
 	@SuppressWarnings("unchecked")
 	public int index(Object t){
-		int i=0;
-   	 Iterator<Object> itr = this.arrayStates.iterator();
-   	while (itr.hasNext()) {
+	int i=0;
+   	Iterator<Object> itr = this.arrayStates.iterator();
+   	 	while (itr.hasNext()) {
     	
-    	if(itr.next().equals(t)){        	    		
-    		return i;				//ca match indice array -1
-    	} 
-    	i++;
-    }
+   	 		if(itr.next().equals(t)){        	    		
+   	 			return i;				//ca match indice array -1
+   	 		} 
+   	 		i++;
+   	 	}
 	return -1;
 	}
 	
 	public Object previous() throws Exception {
 		
-		if(status-1>=-1){		//status positif
+		if(status>=0){		//status positif
 			status=status-1;
 		return arrayStates.get(status+1);
 		
