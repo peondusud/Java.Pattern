@@ -52,11 +52,10 @@ public class Buffer implements Isujet,Ibuffer{
 	
 	public void restoreState(Object r){
 		if(r instanceof String){
-			Memento mem = (Memento) r;
-			this.str=mem.getSaavedState();			
+			
+			this.str=(String)r;			
 		}
-		
-		
+				
 	}
 	
 	
@@ -70,48 +69,41 @@ public class Buffer implements Isujet,Ibuffer{
 		
 	}
 	
-	public void insert(UI ihm,Buffer bu) {
-		// TODO Auto-generated method stub
-		
-	}
 	
 	public  void copy() {
-		pressP.setClip(str.substring(selection.getDebut(),selection.getFin()));
 		
-		this.notify_Obs();
-		
+		pressP.setClip(str.substring(selection.getDebut(),selection.getFin()));	
+		this.notify_Obs();		
 	}
 	
 	public void coller() {
 		
 		System.out.println("coller");
+		care.addState(new String(str));
 		str=str.substring(0, selection.getDebut()) + pressP.getClip() + str.substring(selection.getFin(), str.length());
-		care.addState(str);
+	
 		this.notify_Obs();
 	}
 	public void delete() {
 		
 		System.out.println("delete");
+		care.addState(new String(str));
 		str=str.substring(0, selection.getDebut())+str.substring(selection.getFin(), str.length());
-		care.addState(str);
 		this.notify_Obs();
 	}
 	public void redo() {
-		// TODO Auto-generated method stub
+		
 		System.out.println("refaire");
-		/*if(care.status+1<care.size){
-			restoreState(care.getState(care.status+1));
-			care.status=care.status+1;
+		try{
+			restoreState(care.next());
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
 			this.notify_Obs();
-		}*/
 	}
 	public void undo() {
-		// TODO Auto-generated method stub
-		System.out.println("undo");
-		/*if(care.status-1>=-1){
-			restoreState(care.getState(care.status-1));
-			care.status=care.status-1;
-		}*/
+		
 		try{
 		restoreState(care.previous());
 		}
@@ -120,6 +112,7 @@ public class Buffer implements Isujet,Ibuffer{
 		}
 		this.notify_Obs();
 	}
+	
 	@Override
 	public void insert() {
 		// TODO Auto-generated method stub
@@ -128,10 +121,10 @@ public class Buffer implements Isujet,Ibuffer{
 	}
 	
 	public void notify_Obs() {
-   	 Iterator<Iobserver> itr = this.arr_Obs.iterator();
-   	   // while (itr.hasNext()) {
-   	    //itr.next().update(this);    	    	
-   	    //}	
+   	/* Iterator<Iobserver> itr = this.arr_Obs.iterator();
+   	    while (itr.hasNext()) {
+   	    itr.next().update(this);    	    	
+   	    }	*/
    	 for (int i =0; i < arr_Obs.size(); i++)
    	 {
    		 arr_Obs.get(i).update(this);

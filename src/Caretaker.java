@@ -13,8 +13,7 @@ public class Caretaker {
 	public void addState(Object o){	
 		
 		arrayStates.add( o );
-		status=index(o)-1;			
-		arrayStates.size();
+		status=index(o)-1;	
 	}
 	
 	public Object getState( int i){		
@@ -36,26 +35,27 @@ public class Caretaker {
 	
 	public Object previous() throws Exception {
 		
-		if(status-1>=-1){
+		if(status-1>=-1){		//status positif
 			status=status-1;
-		return getState(status+1);
+		return arrayStates.get(status+1);
 		
 		}
 		
 		throw new Exception();
 		}
 	
-	public Object  next(){		
+	public Object  next() throws Exception{		
 		
-	/*	if(status+1<arrayStates.size()){
-			restoreState(care.getState(care.status+1));
-			care.status=care.status+1;
-			this.notify_Obs();
+	
+		if(status+1<arrayStates.size()){
+			status=status+1;
+		return arrayStates.get(status);
+		
 		}
-		*/
 		
+		throw new Exception();
 		
-		return arrayStates;}
+		}
 	
 	
 }
