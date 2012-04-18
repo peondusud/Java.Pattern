@@ -50,13 +50,13 @@ public class Caretaker {
 	
 	public Object  next() throws Exception{			
 		int tmp =status+1;	
-		if(tmp<arrayStates.size() && tmp>=0){
+		if(tmp<arrayStates.size() && tmp>=0){ //3+1<4
 			status=tmp;
 			return arrayStates.get(tmp);		
 		}
 		else{
 			status=arrayStates.size()-1;
-			return arrayStates.get(tmp);
+			return arrayStates.get(status);
 		}
 	}
 	
