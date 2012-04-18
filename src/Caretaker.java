@@ -13,7 +13,9 @@ public class Caretaker {
 	public void addState(Object o){	
 		
 		arrayStates.add( o );
-		status=index(o)-1;	
+		status=index(o);
+		//reecrecrire par dessus
+		
 	}
 	
 	public Object getState( int i){		
@@ -25,10 +27,11 @@ public class Caretaker {
 		int i=0;
    	 Iterator<Object> itr = this.arrayStates.iterator();
    	while (itr.hasNext()) {
-    	i++;
+    	
     	if(itr.next().equals(t)){        	    		
     		return i;				//ca match indice array -1
-    	}        	    	
+    	} 
+    	i++;
     }
 	return -1;
 	}
