@@ -1,8 +1,4 @@
 
-
-
-
-
 public class Clipboard {
 
 	
@@ -19,8 +15,5 @@ public class Clipboard {
 	public void setClip(String clip) {
 		this.clip = clip;
 	}
-	
-	
-	
-	
+		
 }

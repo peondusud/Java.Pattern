@@ -1,6 +1,4 @@
 
-
-
 public class UI  implements Iobserver{
 	/**
 	 * 
@@ -16,9 +14,7 @@ public class UI  implements Iobserver{
 	
 	public void setcmd(Icmd e){
 		
-		icmd=e;
-		
-		
+		icmd=e;		
 	}
 	
 	
@@ -28,7 +24,7 @@ public class UI  implements Iobserver{
 		{
 			Ibuffer b = (Ibuffer) a;
 			System.out.println(b.getStr()); 
-			System.out.println("Presse Papier : "+ b.getPressP().getClip());
+			System.out.println("     Presse Papier : **# "+ b.getPressP().getClip()+" #**");
 		}
 		
 	}

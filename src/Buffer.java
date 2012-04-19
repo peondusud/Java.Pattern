@@ -77,8 +77,7 @@ public class Buffer implements Isujet,Ibuffer{
 	}
 	
 	public void coller() {
-		
-		System.out.println("coller");
+	
 		care.addState(new String(str));
 		str=str.substring(0, selection.getDebut()) + pressP.getClip() + str.substring(selection.getFin(), str.length());
 	
@@ -86,7 +85,6 @@ public class Buffer implements Isujet,Ibuffer{
 	}
 	public void delete() {
 		
-		System.out.println("delete");
 		care.addState(new String(str));
 		str=str.substring(0, selection.getDebut())+str.substring(selection.getFin(), str.length());
 		this.notify_Obs();

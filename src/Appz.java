@@ -36,8 +36,7 @@ public class Appz {
 		 Scanner in = new Scanner(System.in);
 		 String name;
 		  while (in.hasNext()) {
-	            name = in.nextLine();
-	            
+	            name = in.nextLine();	            
 	            
 	           if( name.startsWith("select(") && name.endsWith(")") ){ 	//select(***)
 	            	
@@ -117,6 +116,8 @@ public class Appz {
 		
 	//	while(true) {}
 	}
+	
+	public void test(){}
 	
 	
 }
