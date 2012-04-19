@@ -15,7 +15,8 @@ public class Caretaker {
 		arrayStates.add( o );
 		}
 		else{
-			//arrayStates.add(status+1,o);			//bug
+			if(arrayStates.size()>1)
+			arrayStates.add(status+2,o);			//bug
 		}		
 		status=index(o);
 	}

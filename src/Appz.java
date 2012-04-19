@@ -27,6 +27,10 @@ public class Appz {
 		coller.execute();
 		coller.execute();
 		coller.execute();
+		undo.execute();
+		undo.execute();
+		undo.execute();
+		
 		 
 		 Scanner in = new Scanner(System.in);
 		 String name;
