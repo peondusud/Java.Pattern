@@ -93,7 +93,6 @@ public class Buffer implements Isujet,Ibuffer{
 	}
 	public void redo() {
 		
-		System.out.println("refaire");
 		try{
 			restoreState(care.next());
 			}
