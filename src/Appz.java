@@ -16,6 +16,7 @@ public class Appz {
 		Icmd undo = new Undo(buff,gui);//
 		Icmd redo = new Refaire(buff,gui);//
 		Icmd insert = new Insert(buff,gui);//
+		Icmd refresh = new Refresh(buff,gui);//
 		
 		buff.setStr("toto est la, tata est la!");
 		buff.selection.select(10, 15); 	
@@ -108,7 +109,8 @@ public class Appz {
 	            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 	            String newline = System.getProperty("line.separator");
 	             buff.setStr(buff.getStr()+newline+name);
-	             gui.update(buff);
+	             refresh.execute();
+	             //gui.update(buff);
 	            }
 	        }
 	        in.close(); 

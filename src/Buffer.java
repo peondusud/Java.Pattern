@@ -127,6 +127,13 @@ public class Buffer implements Isujet,Ibuffer{
    	 	}
 	}
 
+	@Override
+	public void refresh() {
+		
+		care.addState(new String(str));
+		this.notify_Obs();
+	}
+
 	
 
 }

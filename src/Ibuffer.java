@@ -20,5 +20,6 @@ public interface Ibuffer {
 	public void delete();
 	public void undo() ;
 	public void redo();
+	public void refresh();
 
 }

@@ -23,7 +23,7 @@ public class UI  implements Iobserver{
 	
 	
 	public void update(Object a) {
-		// TODO Auto-generated method stub
+		
 		if(a instanceof Ibuffer) 
 		{
 			Ibuffer b = (Ibuffer) a;
@@ -33,17 +33,5 @@ public class UI  implements Iobserver{
 		
 	}
 
-
-
-	public int getState() {
-		return 0;
-		// TODO Auto-generated method stub
-		
-	}
-
-	
-
-
-	
 
 }
