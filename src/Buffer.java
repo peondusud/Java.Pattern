@@ -65,8 +65,7 @@ public class Buffer implements Isujet,Ibuffer{
 	}
 	@Override
 	public void del(Iobserver o) {
-		// TODO Auto-generated method stub
-		
+		arr_Obs.remove(o);
 	}
 	
 	

@@ -9,7 +9,7 @@ public class Appz {
 		Buffer buff = new Buffer();
 		UI gui = new UI();	
 		buff.add(gui);
-		gui.create();			
+		//gui.create();			
 		Icmd copy = new Copy(buff,gui);//		
 		Icmd coller = new Coller(buff,gui);//
 		Icmd delete = new Del(buff,gui);//
@@ -122,8 +122,9 @@ public class Appz {
 	            {
 	            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 	            String newline = System.getProperty("line.separator");
-	             buff.setStr(buff.getStr()+newline+name);
+	             buff.setStr(buff.getStr()+name);
 	             refresh.execute();
+	             //buff.care.addState(buff.getStr());
 	             //gui.update(buff);
 	            }
 	        }

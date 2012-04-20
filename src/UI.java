@@ -65,8 +65,14 @@ public class UI extends JFrame implements ActionListener,Iobserver, KeyListener{
 		if(a instanceof Ibuffer) 
 		{
 			Ibuffer b = (Ibuffer) a;
+			
 			System.out.println(b.getStr()); 
 			System.out.println("     Presse Papier : **# "+ b.getPressP().getClip()+" #**");
+			
+			
+			
+			
+			
 		}
 		
 	}
