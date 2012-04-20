@@ -75,6 +75,12 @@ public class Buffer implements Isujet,Ibuffer{
 		pressP.setClip(str.substring(selection.getDebut(),selection.getFin()));	
 		this.notify_Obs();		
 	}
+public  void cut() {
+		
+		pressP.setClip(str.substring(selection.getDebut(),selection.getFin()));	
+		str=str.substring (0, selection.getDebut()) + str.substring (selection.getFin());
+		this.notify_Obs();		
+	}
 	
 	public void coller() {
 	

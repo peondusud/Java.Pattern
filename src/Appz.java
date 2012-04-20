@@ -17,7 +17,16 @@ public class Appz {
 		Icmd redo = new Refaire(buff,gui);//
 		Icmd insert = new Insert(buff,gui);//
 		Icmd refresh = new Refresh(buff,gui);//
+		Icmd cut = new Cut(buff,gui);//
 		
+		gui.setcmd(refresh);
+		gui.setcmd(copy);
+		gui.setcmd(coller);
+		gui.setcmd(delete);
+		gui.setcmd(undo);
+		gui.setcmd(redo);
+		gui.setcmd(insert);
+		gui.setcmd(cut);
 		buff.setStr("toto est la, tata est la!");
 		buff.selection.select(10, 15); 	
 		copy.execute();		
@@ -100,7 +109,13 @@ public class Appz {
 	        		   insert.execute();
 	        	   }	           
 	           }
-	           
+	           else if( name.startsWith("cut(") && name.endsWith(")") ) {
+	        	   
+	        	   if( name.matches("^[cut(]{4}[)]") ){
+	        		   
+	        		   cut.execute();
+	        	   }	           
+	           }
 	           
 	           
 	            else
