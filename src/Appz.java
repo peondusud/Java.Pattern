@@ -7,9 +7,10 @@ public class Appz {
 	public static void main(String[] args) {
 		
 		Buffer buff = new Buffer();
+		UIconsole ui = new UIconsole();	
 		UI gui = new UI();	
 		buff.add(gui);
-		//gui.create();			
+		gui.create();			
 		Icmd copy = new Copy(buff,gui);//		
 		Icmd coller = new Coller(buff,gui);//
 		Icmd delete = new Del(buff,gui);//
@@ -116,12 +117,19 @@ public class Appz {
 	        		   cut.execute();
 	        	   }	           
 	           }
+	           else if( name.startsWith("enter(") && name.endsWith(")") ) {
+	        	   
+	        	   if( name.matches("^[enter(]{4}[)]") ){
+	        		   String newline = System.getProperty("line.separator");
+	  	             buff.setStr(buff.getStr()+newline);
+	        		   
+	        	   }	           
+	           }
 	           
 	           
 	            else
 	            {
 	            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-	            String newline = System.getProperty("line.separator");
 	             buff.setStr(buff.getStr()+name);
 	             refresh.execute();
 	             //buff.care.addState(buff.getStr());

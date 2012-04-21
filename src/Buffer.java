@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.Iterator;
-
 
 
 
@@ -118,8 +116,9 @@ public  void cut() {
 	
 	@Override
 	public void insert() {
-		// TODO Auto-generated method stub
 		
+		str=str.substring (0, selection.getDebut())+ pressP.toString() + str.substring (selection.getFin());
+		care.addState(new String(str));
 		this.notify_Obs();
 	}
 	
