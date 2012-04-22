@@ -4,7 +4,6 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Frame;
 import java.awt.GridLayout;
-import java.awt.MenuShortcut;
 import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,9 +15,6 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.event.CaretEvent;
-import javax.swing.event.CaretListener;
 
 
 public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
@@ -33,6 +29,7 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 	private Icmd deleteCMD;//
 	private Icmd undoCMD;//
 	private Icmd redoCMD;//
+	@SuppressWarnings("unused")
 	private Icmd insertCMD ;//
 	private Icmd refreshCMD ;//
 	private Icmd cutCMD ;//	
@@ -66,6 +63,7 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 		 textArea.setForeground(Color.WHITE);	
 		 textArea.setPreferredSize(new Dimension(150, 520));
 		 textArea.addMouseListener(this);
+		 textArea.addKeyListener(this);
 		 container.setPreferredSize(new Dimension(150,45));
 		 container.setLayout(new GridLayout(1,5));
 		 container.add(copy);
@@ -86,8 +84,7 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				System.out.println("coller"); 
+			
 				collerCMD.execute();
 			}
 		});
@@ -95,11 +92,7 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				System.out.println("cut"); 
-				System.out.println(textArea.getCaretPosition()); 
-				System.out.println(textArea.getSelectionStart()); 
-				System.out.println(textArea.getSelectionEnd()); 
+			
 				cutCMD.execute();
 			}
 		});
@@ -107,8 +100,7 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				System.out.println("undo"); 
+				
 				undoCMD.execute();
 			}
 		});
@@ -116,8 +108,7 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				System.out.println("redo"); 
+				
 				redoCMD.execute();
 			}
 		});
@@ -160,8 +151,8 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 		{
 			Ibuffer b = (Ibuffer) a;
 			textArea.setText(b.getStr());
-			textArea.setSelectionStart(b.getSelection().getDebut());
-			textArea.setSelectionEnd(b.getSelection().getFin());
+			textArea.setSelectionStart(b.getSelection().getDebut());		//maj SELECTEDselection
+			textArea.setSelectionEnd(b.getSelection().getFin());			//maj SELECTEDselection
 			System.out.println(b.getStr()); 
 			System.out.println("     Presse Papier : **# "+ b.getPressP().getClip()+" #**");
 				
@@ -175,13 +166,29 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 	public void keyPressed(KeyEvent arg0) {
 
 		 if ( arg0.getKeyCode() == KeyEvent.VK_ENTER){
-		    	textArea.setText(textArea.getText()+System.getProperty("line.separator"));
-		    	refreshCMD.execute();//add a caretaker
+					    	
+		    	Buffer.str=textArea.getText().substring(0,textArea.getSelectionStart())+System.getProperty("line.separator")+textArea.getText().substring(textArea.getSelectionEnd());
+		    	a=textArea.getSelectionStart();
+		   	 	b=textArea.getSelectionEnd();
+		   		Buffer.setSelection(a,b);		    	
+		    	
+		    	refreshCMD.execute();//add caretaker
 		    }
-		 if ( arg0.getKeyCode() == KeyEvent.VK_BACK_SPACE){
-		    	textArea.setText(textArea.getText());
-		    	refreshCMD.execute();//add a caretaker
+		 else if ( arg0.getKeyCode() == KeyEvent.VK_BACK_SPACE){
+			 Buffer.str=textArea.getText();
+		    	deleteCMD.execute();
 		    }
+		 
+		 else{
+			 a=textArea.getSelectionStart();
+			 b=textArea.getSelectionEnd();
+			 
+			 Buffer.str=textArea.getText();
+			 Buffer.setSelection(a,b);		    	
+		    	
+		    	refreshCMD.execute();
+		 }
+		 
 		 
 	}
 
@@ -228,7 +235,6 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 	
 		Buffer.setSelection(a,b);
 	
-		//refreshCMD.execute(); //bug	*/
 		
 	}
 

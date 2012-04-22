@@ -8,7 +8,7 @@ public class Buffer implements Isujet,Ibuffer{
 	public static Selection selection;
 	private Caretaker care;	
 	public ArrayList<Iobserver> arr_Obs =new ArrayList<Iobserver>();
-	public String str;
+	public static String str;
 	private static int cut_flag=0;
 	public Buffer() {
 	str=new String();
@@ -39,20 +39,21 @@ public class Buffer implements Isujet,Ibuffer{
 	public String getStr() {
 		return str;
 	}
+	@SuppressWarnings("static-access")
 	public void setStr(String str) {
 		this.str = str;
 	}
 	
+	@SuppressWarnings("static-access")
 	public Object rec2memento(){
 		return new Memento(this.str);		
 	}
 	
+	@SuppressWarnings("static-access")
 	public void restoreState(Object r){
-		if(r instanceof String){
-			
+		if(r instanceof String){			
 			this.str=(String)r;			
-		}
-				
+		}				
 	}
 	
 	
@@ -85,32 +86,43 @@ public  void cut() {
 	public void coller() {
 		
 		care.addState(new String(str));
-		String tmp1=str.substring(0, selection.getDebut()).toString();		
-		String tmp2=pressP.getClip().toString();
-		String tmp3=str.substring(selection.getFin()).toString();
+		String tmp1=new String(str.substring(0, selection.getDebut()).toString());		
+		String tmp2=new String(pressP.getClip().toString());
+					
 		
 		if(cut_flag==1){	
-			//str="";
-			
-			str=new StringBuilder().append(tmp1).append(tmp2).append(tmp3).toString();		//str=tmp1 + tmp2 + tmp3; //kelmerde
+			//Coller si cut 
+			String tmp3=new String(str.substring(selection.getDebut()));
+			//str=tmp1 + tmp2 + tmp3; 
+			str=new StringBuilder().append(tmp1).append(tmp2).append(tmp3).toString();		
 			pressP.setClip("");
-		cut_flag=0;
+			cut_flag=0;
 		}
 		else if(cut_flag==2){
-			//str=str.substring(0, selection.getDebut()) +  pressP.getClip() + str.substring(selection.getFin() );
-			//str="";
+			//coller normal
+			String tmp3=new String(str.substring(selection.getFin()));	
 			str=new StringBuilder().append(tmp1).append(tmp2).append(tmp3).toString();	
+			//str=str.substring(0, selection.getDebut()) +  pressP.getClip() + str.substring(selection.getFin() );
 		}
 		else{
-			pressP.setClip("");
-				
+			pressP.setClip("");				
 		}
 		this.notify_Obs();
 	}
+	
 	public void delete() {
 		
 		care.addState(new String(str));
-		str=str.substring(0, selection.getDebut()) + str.substring(selection.getFin(), str.length() );
+		if(selection.getFin()!= selection.getDebut()){
+		str=str.substring(0, selection.getDebut()) + str.substring(selection.getFin() );
+		selection.setFin(selection.getDebut());	//maj curseur
+		}
+		else{
+			str=str.substring(0, selection.getDebut()-1) + str.substring(selection.getDebut() );
+			selection.setDebut(selection.getDebut()-1);
+			selection.setFin(selection.getDebut());		//maj curseur
+		}
+	
 		this.notify_Obs();
 	}
 	public void redo() {

@@ -4,10 +4,11 @@ import java.util.*;
 public class Appz {
 
 	
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		
 		Buffer buff = new Buffer();
-		UIconsole ui = new UIconsole();	
+		//UIconsole ui = new UIconsole();	
 		UI gui = new UI();	
 		buff.add(gui);
 		gui.create();			
@@ -120,13 +121,25 @@ public class Appz {
 	           }
 	           else if( name.startsWith("enter(") && name.endsWith(")") ) {
 	        	   
-	        	   if( name.matches("^[enter(]{4}[)]") ){
+	        	   if( name.matches("^[enter(]{6}[)]") ){
 	        		   String newline = System.getProperty("line.separator");
 	  	             buff.setStr(buff.getStr()+newline);
 	        		   
 	        	   }	           
 	           }
-	           
+	           else if( name.startsWith("help(") && name.endsWith(")") ) {
+	        	   
+	        	   if( name.matches("^[help(]{4}[)]") ){
+	        		   help();
+	        	   }	           
+	           }
+	           else if( name.startsWith("--help") ) {
+	        	   
+	        	   if( name.matches("^[help(]{4}[)]") ){
+	        		   help();
+	        	   }	           
+	           }
+	       
 	           
 	            else
 	            {
@@ -142,7 +155,18 @@ public class Appz {
 	//	while(true) {}
 	}
 	
-	public void test(){}
+	public static void help(){
+			System.out.println("Selection(digit,digit) = Selection");
+		   System.out.println("copy() = copy");
+		   System.out.println("coller() = coller");
+		   System.out.println("cut() = cut");
+		   System.out.println("insert() = insert");
+		   System.out.println("redo() = redo");
+		   System.out.println("undo() = undo");
+		   System.out.println("enter() = retour ligne");
+		   System.out.println("del() = delete");
+		
+	}
 	
 	
 }

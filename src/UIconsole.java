@@ -22,10 +22,18 @@ public class UIconsole extends JFrame implements Iobserver, KeyListener{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
-	private Icmd icmd ;	
+	private static final long serialVersionUID = 1L;	
+	private Icmd copyCMD;	
+	private Icmd collerCMD;//
+	private Icmd deleteCMD;//
+	private Icmd undoCMD;//
+	private Icmd redoCMD;//
+	@SuppressWarnings("unused")
+	private Icmd insertCMD ;//
+	private Icmd refreshCMD ;//
+	private Icmd cutCMD ;//	
 	private Frame f = new Frame("Frame"); 
-	private JPanel container = new JPanel();
+	//private JPanel container = new JPanel();
 	private TextArea textArea = new TextArea("", 0,0, TextArea.SCROLLBARS_VERTICAL_ONLY);
 	private JTextField textAction =new JTextField("");
 
@@ -103,7 +111,31 @@ public class UIconsole extends JFrame implements Iobserver, KeyListener{
 	}
 
 
-
+	public void setcopyCMD(Icmd e){		
+		copyCMD=e;		
+	}
+	public void setcollerCMD(Icmd e){		
+		collerCMD=e;		
+	}
+	public void setcutCMD(Icmd e){		
+		cutCMD=e;		
+	}
+	
+	public void setdeleteCMD(Icmd e){		
+		deleteCMD=e;		
+	}
+	public void setundoCMD(Icmd e){		
+		undoCMD=e;		
+	}
+	public void setredoCMD(Icmd e){		
+		redoCMD=e;		
+	}
+	public void setinsertCMD(Icmd e){		
+		insertCMD=e;		
+	}
+	public void setrefreshCMD(Icmd e){		
+		refreshCMD=e;		
+	}
 	
 
 }
