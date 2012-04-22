@@ -16,6 +16,7 @@ public interface Ibuffer {
 	public void del(Iobserver o);
 	public void insert();
 	public void copy();
+	public void cut();
 	public void coller();
 	public void delete();
 	public void undo() ;

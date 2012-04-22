@@ -4,7 +4,7 @@ public class Insert implements Icmd{
 	Ibuffer ibuff ;
 	//UI ihm ;
 	
-	public Insert(Ibuffer ibu,UI ihm2){
+	public Insert(Ibuffer ibu){
 		ibuff=ibu;
 	//ihm=ihm2;
 			}

@@ -32,7 +32,7 @@ public class Caretaker {
    	Iterator<Object> itr = this.arrayStates.iterator();
    	 	while (itr.hasNext()) {    	
    	 		if(itr.next().equals(t))       	    		
-   	 			return i;				//ca match indice array -1
+   	 			return i;				//
    	 		i++;
    	 	}
 	return -1;

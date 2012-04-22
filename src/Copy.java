@@ -5,7 +5,7 @@ public class Copy implements Icmd{
 	Ibuffer ibuff ;
 	//UI ihm ;
 	
-	public Copy(Ibuffer ibu,UI ihm2){
+	public Copy(Ibuffer ibu){
 		ibuff=ibu;
 	//	ihm=ihm2;
 		

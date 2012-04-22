@@ -4,7 +4,7 @@ public class Del implements Icmd{
 	Ibuffer ibuff ;
 	//UI ihm ;
 	
-	public Del(Ibuffer ibu,UI ihm2){
+	public Del(Ibuffer ibu){
 		ibuff=ibu;
 	//ihm=ihm2;
 		

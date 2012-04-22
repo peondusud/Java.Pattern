@@ -11,23 +11,24 @@ public class Appz {
 		UI gui = new UI();	
 		buff.add(gui);
 		gui.create();			
-		Icmd copy = new Copy(buff,gui);//		
-		Icmd coller = new Coller(buff,gui);//
-		Icmd delete = new Del(buff,gui);//
-		Icmd undo = new Undo(buff,gui);//
-		Icmd redo = new Refaire(buff,gui);//
-		Icmd insert = new Insert(buff,gui);//
-		Icmd refresh = new Refresh(buff,gui);//
-		Icmd cut = new Cut(buff,gui);//
+		Icmd copy = new Copy(buff);//		
+		Icmd coller = new Coller(buff);//
+		Icmd delete = new Del(buff);//
+		Icmd undo = new Undo(buff);//
+		Icmd redo = new Refaire(buff);//
+		Icmd insert = new Insert(buff);//
+		Icmd refresh = new Refresh(buff);//
+		Icmd cut = new Cut(buff);//
 		
-		gui.setcmd(refresh);
-		gui.setcmd(copy);
-		gui.setcmd(coller);
-		gui.setcmd(delete);
-		gui.setcmd(undo);
-		gui.setcmd(redo);
-		gui.setcmd(insert);
-		gui.setcmd(cut);
+		gui.setcopyCMD(copy);
+		gui.setcollerCMD(coller);
+		gui.setdeleteCMD(delete);
+		gui.setundoCMD(undo);
+		gui.setredoCMD(redo);
+		gui.setcutCMD(cut);
+		gui.setrefreshCMD(refresh);
+		gui.setinsertCMD(insert);
+	
 		buff.setStr("toto est la, tata est la!");
 		buff.selection.select(10, 15); 	
 		copy.execute();		

@@ -4,7 +4,7 @@ public class Cut implements Icmd{
 	Ibuffer ibuff ;
 	//UI ihm ;
 	
-	public Cut(Ibuffer ibu,UI ihm2){
+	public Cut(Ibuffer ibu){
 		ibuff=ibu;
 	//	ihm=ihm2;
 		
@@ -14,7 +14,7 @@ public class Cut implements Icmd{
 	@Override
 	public void execute() {
 		// TODO Auto-generated method stub
-		ibuff.copy();
+		ibuff.cut();
 		//ihm.update(ibuff);
 		
 	}

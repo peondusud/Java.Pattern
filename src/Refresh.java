@@ -4,7 +4,7 @@ public class Refresh implements Icmd{
 	Ibuffer ibuff ;
 	//UI ihm ;
 	
-	public Refresh(Ibuffer ibu,UI ihm2){
+	public Refresh(Ibuffer ibu){
 		ibuff=ibu;
 	//ihm=ihm2;
 		
@@ -16,6 +16,7 @@ public class Refresh implements Icmd{
 		// TODO Auto-generated method stub
 		ibuff.refresh();
 	}
-	
+
+
 
 }

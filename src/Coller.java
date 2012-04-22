@@ -5,7 +5,7 @@ public class Coller implements Icmd{
 	Ibuffer ibuff ;
 	//UI ihm ;
 	
-	public Coller(Ibuffer ibu,UI ihm2){
+	public Coller(Ibuffer ibu){
 		ibuff=ibu;
 	//ihm=ihm2;
 		
