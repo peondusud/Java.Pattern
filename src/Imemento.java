@@ -3,11 +3,12 @@
 public interface Imemento {
 	
 	
-	public void getState();
+	//public Object getState(int a);
 	
 	
-	public void recState(String s);
+//	public void addState(Object o);
 	
 	
-
+	public void restoreFromMomento(Memento pMemento);
+    public void saveInMemento();
 }

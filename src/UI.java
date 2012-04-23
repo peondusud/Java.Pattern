@@ -17,24 +17,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
-public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
+public class UI extends JFrame implements Iobserver, KeyListener,MouseListener,IuI{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;	
+				
 	
-			
-	private Icmd copyCMD;	
-	private Icmd collerCMD;//
-	private Icmd deleteCMD;//
-	private Icmd undoCMD;//
-	private Icmd redoCMD;//
-	@SuppressWarnings("unused")
-	private Icmd insertCMD ;//
-	private Icmd refreshCMD ;//
-	private Icmd cutCMD ;//	
-	private int a=0;
-	private int b=0;
 	private Frame f = new Frame("Frame"); 
 	private JPanel container = new JPanel();
 	private JButton copy= new JButton("Copy");
@@ -43,7 +32,21 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 	private JButton undo= new JButton("UNdo");
 	private JButton redo= new JButton("REdo");
 	private TextArea textArea = new TextArea("", 0,0, TextArea.SCROLLBARS_BOTH);
-
+	
+	private Icmd copyCMD;	
+	private Icmd collerCMD;
+	private Icmd deleteCMD;
+	private Icmd undoCMD;
+	private Icmd redoCMD;
+	@SuppressWarnings("unused")
+	private Icmd insertCMD ;
+	private Icmd refreshCMD ;
+	private Icmd cutCMD ;
+	private Icmd addCharCMD ;
+	private Buffer buf;
+	private int a=0;
+	private int b=0;
+	
 
 	 
 	public void create() {
@@ -58,7 +61,7 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 		 //container.setBackground(Color.white);
 	     f.setBackground(Color.BLACK);
 		 textArea.setFont(police);
-		 textArea.setEditable(true);	
+		 textArea.setEditable(false);	
 		 textArea.setBackground(Color.BLACK);
 		 textArea.setForeground(Color.WHITE);	
 		 textArea.setPreferredSize(new Dimension(150, 520));
@@ -75,8 +78,7 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-							
+											
 				copyCMD.execute();
 			}
 		});
@@ -143,6 +145,13 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 	public void setrefreshCMD(Icmd e){		
 		refreshCMD=e;		
 	}
+	
+	public void setaddCharCMD(Icmd e){		
+		addCharCMD=e;		
+	}
+	public void setBuffer(Ibuffer ib){
+		buf=(Buffer)ib;
+	}
 
 	
 	public void update(Object a) {
@@ -150,12 +159,13 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 		if(a instanceof Ibuffer) 
 		{
 			Ibuffer b = (Ibuffer) a;
+			textArea.setText("");
 			textArea.setText(b.getStr());
 			textArea.setSelectionStart(b.getSelection().getDebut());		//maj SELECTEDselection
 			textArea.setSelectionEnd(b.getSelection().getFin());			//maj SELECTEDselection
 			System.out.println(b.getStr()); 
 			System.out.println("     Presse Papier : **# "+ b.getPressP().getClip()+" #**");
-				
+		
 		}
 		
 	}
@@ -167,26 +177,29 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 
 		 if ( arg0.getKeyCode() == KeyEvent.VK_ENTER){
 					    	
-		    	Buffer.str=textArea.getText().substring(0,textArea.getSelectionStart())+System.getProperty("line.separator")+textArea.getText().substring(textArea.getSelectionEnd());
+			 buf.setStr(textArea.getText().substring(0,textArea.getSelectionStart())+System.getProperty("line.separator")+textArea.getText().substring(textArea.getSelectionEnd()));
 		    	a=textArea.getSelectionStart();
 		   	 	b=textArea.getSelectionEnd();
-		   		Buffer.setSelection(a,b);		    	
+		   		buf.setSelection(a,b);		    	
 		    	
 		    	refreshCMD.execute();//add caretaker
 		    }
 		 else if ( arg0.getKeyCode() == KeyEvent.VK_BACK_SPACE){
-			 Buffer.str=textArea.getText();
+			 buf.setStr(textArea.getText());
 		    	deleteCMD.execute();
 		    }
 		 
 		 else{
 			 a=textArea.getSelectionStart();
 			 b=textArea.getSelectionEnd();
-			 
-			 Buffer.str=textArea.getText();
-			 Buffer.setSelection(a,b);		    	
-		    	
-		    	refreshCMD.execute();
+			String tmp= Character.toString(arg0.getKeyChar());
+			 if( tmp.matches("[a-zA-Z0-9&é')(-è_çà$£§:;,ù%=<>²&#}{|`^]+") ){		//\p{Punct} essayer marche pas regex tout sauf control bouton
+			// buf.setStr(textArea.getText());
+			 buf.setSelection(a,b);	
+			 buf.setaddchar(tmp);		    	
+			 addCharCMD.execute();
+		    	//textArea.setText("");
+			 }
 		 }
 		 
 		 
@@ -194,13 +207,16 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {
+		//refreshCMD.execute();
 		
+		buf.notify_Obs();
 	}
 
 	@Override
 	public void keyTyped(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-		refreshCMD.execute();
+		
+		
+		//refreshCMD.execute();
 	}
 
 	@Override
@@ -211,19 +227,19 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 
 	@Override
 	public void mouseEntered(MouseEvent arg0) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	@Override
 	public void mouseExited(MouseEvent arg0) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	@Override
 	public void mousePressed(MouseEvent arg0) {
-		// TODO Auto-generated method stub
+	
 		
 	}
 
@@ -233,10 +249,12 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener{
 	 a=textArea.getSelectionStart();
 	 b=textArea.getSelectionEnd();
 	
-		Buffer.setSelection(a,b);
+		buf.setSelection(a,b);
 	
 		
 	}
+
+
 
 
 

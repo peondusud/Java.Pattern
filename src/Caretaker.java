@@ -2,21 +2,23 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 
-public class Caretaker {
+public class Caretaker  {
 	
 	
-	@SuppressWarnings("rawtypes")
-	private ArrayList arrayStates = new  ArrayList();
+	private ArrayList<Memento> arrayStates = new  ArrayList<Memento>();
 	private int status=0;
 	
-	@SuppressWarnings("unchecked")
-	public void addState(Object o){	
-		if (status+1==arrayStates.size()){
-		arrayStates.add( o );
+	public void addState(Memento o)
+	{	
+		if (status+1==arrayStates.size())
+		{
+			arrayStates.add(  o );
 		}
-		else{
-			if(arrayStates.size()>1){
-			arrayStates.add(status+1,o);	//bug
+		else
+		{
+			if(arrayStates.size()>1)
+			{
+				arrayStates.add(status+1, o);	//bug
 			}
 		}		
 		status=index(o);
@@ -26,10 +28,9 @@ public class Caretaker {
 	return arrayStates.get(i);
 	}
 	
-	@SuppressWarnings("unchecked")
 	public int index(Object t){
 	int i=0;
-   	Iterator<Object> itr = this.arrayStates.iterator();
+   	Iterator<Memento> itr = this.arrayStates.iterator();
    	 	while (itr.hasNext()) {    	
    	 		if(itr.next().equals(t))       	    		
    	 			return i;				//
@@ -61,6 +62,8 @@ public class Caretaker {
 			return arrayStates.get(status);
 		}
 	}
+
 	
+
 	
 }

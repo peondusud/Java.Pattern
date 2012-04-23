@@ -2,21 +2,19 @@ import java.util.ArrayList;
 
 
 
-public class Buffer implements Isujet,Ibuffer{
+public class Buffer implements Isujet,Ibuffer, Imemento{
 
-	public Clipboard pressP;
-	public static Selection selection;
-	private Caretaker care;	
-	public ArrayList<Iobserver> arr_Obs =new ArrayList<Iobserver>();
-	public static String str;
-	private static int cut_flag=0;
-	public Buffer() {
-	str=new String();
-	pressP=new Clipboard();
-	selection=new Selection();
-	care=new Caretaker();
-		
-	}
+	private Clipboard pressP=new Clipboard();
+	private Selection selection=new Selection();
+	private Caretaker care=new Caretaker();
+	private ArrayList<Iobserver> arr_Obs =new ArrayList<Iobserver>();
+	private String str=new String();
+	private  int cut_flag=0;
+	private  int undo_flag=0;
+	private String addchar=new String("");
+
+	
+	
 	
 	public Clipboard getPressP() {
 		return pressP;
@@ -39,20 +37,17 @@ public class Buffer implements Isujet,Ibuffer{
 	public String getStr() {
 		return str;
 	}
-	@SuppressWarnings("static-access")
 	public void setStr(String str) {
 		this.str = str;
 	}
 	
-	@SuppressWarnings("static-access")
 	public Object rec2memento(){
 		return new Memento(this.str);		
 	}
 	
-	@SuppressWarnings("static-access")
 	public void restoreState(Object r){
-		if(r instanceof String){			
-			this.str=(String)r;			
+		if(r instanceof Memento){			
+			this.str=((Memento) r).getSaavedState();			
 		}				
 	}
 	
@@ -68,27 +63,31 @@ public class Buffer implements Isujet,Ibuffer{
 	
 	
 	public  void copy() {
-		cut_flag=2;
-		care.addState(new String(str));
-		pressP.setClip(str.substring(selection.getDebut(),selection.getFin()));	
+		cut_flag=2;	
+		undo_flag=0;
+		
+		pressP.setClip(new String(str.substring(selection.getDebut(),selection.getFin())));	
+		care.addState(new Memento(str));
 		this.notify_Obs();		
 	}
 public  void cut() {
 		cut_flag=1;
+		undo_flag=0;
 		//copy();
 		//delete();
-		care.addState(new String(str));
+	
 		pressP.setClip(str.substring(selection.getDebut(),selection.getFin()));	
+		care.addState(new Memento(str));
 		str=str.substring (0, selection.getDebut()) + str.substring (selection.getFin());
 		this.notify_Obs();		
 	}
 	
 	public void coller() {
 		
-		care.addState(new String(str));
+		care.addState(new Memento(str));
 		String tmp1=new String(str.substring(0, selection.getDebut()).toString());		
 		String tmp2=new String(pressP.getClip().toString());
-					
+		undo_flag=0;		
 		
 		if(cut_flag==1){	
 			//Coller si cut 
@@ -111,8 +110,8 @@ public  void cut() {
 	}
 	
 	public void delete() {
-		
-		care.addState(new String(str));
+		undo_flag=0;
+		care.addState(new Memento(str));
 		if(selection.getFin()!= selection.getDebut()){
 		str=str.substring(0, selection.getDebut()) + str.substring(selection.getFin() );
 		selection.setFin(selection.getDebut());	//maj curseur
@@ -138,7 +137,10 @@ public  void cut() {
 	public void undo() {
 		
 		try{
-		care.addState(new String(str));
+			if (undo_flag==0){
+				care.addState(new Memento(str));
+				undo_flag=1;
+			}
 		restoreState(care.previous());
 		}
 		catch(Exception e){
@@ -149,9 +151,9 @@ public  void cut() {
 	
 	@Override
 	public void insert() {
-		
-		str=str.substring (0, selection.getDebut())+ pressP.toString() + str.substring (selection.getFin());
-		care.addState(new String(str));
+		undo_flag=0;
+		care.addState(new Memento(str));
+		str=str.substring (0, selection.getDebut())+ pressP.toString() + str.substring (selection.getFin());		
 		this.notify_Obs();
 	}
 	
@@ -163,18 +165,42 @@ public  void cut() {
 	}
 
 	@Override
-	public void refresh() {
-		
+	public void refresh() {		
 			
-		care.addState(new String(str));
+		//care.addState(new Memento(str));
 		this.notify_Obs();
 	}
 	
-	public static void setSelection(int a,int b)  {
-		selection.debut=  a;
-		selection.fin=b;
-		
-		
+	public void addchar() {		
+		undo_flag=0;
+		care.addState(new Memento(str));			
+		String tmp1=str.substring (0, selection.getDebut());
+		String tmp2=str.substring (selection.getFin());
+		str= tmp1+ addchar +tmp2 ;	
+		selection.setDebut(selection.getDebut()+1);
+		selection.setFin(selection.getDebut());
+		this.notify_Obs();
+	}
+	
+	public void setaddchar(String g) {		
+		addchar=g;	
+	}
+	
+	public  void setSelection(int a,int b)  {
+		selection.setDebut(a);
+		selection.setFin(b);
+	}
+	
+	@Override
+	public void restoreFromMomento(Memento pMemento) {
+		this.str=pMemento.getSaavedState();		
+	}
+	
+	@Override
+	public void saveInMemento() {
+		// TODO Auto-generated method stub
+		Memento a = new Memento(str);
+		this.care.addState(a);
 	}
 
 

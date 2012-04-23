@@ -18,7 +18,7 @@ import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
 
 
-public class UIconsole extends JFrame implements Iobserver, KeyListener{
+public class UIconsole extends JFrame implements Iobserver, KeyListener,IuI{
 	/**
 	 * 
 	 */
@@ -66,10 +66,7 @@ public class UIconsole extends JFrame implements Iobserver, KeyListener{
 		 this.setVisible(true);
 		}
 	
-	public void setcmd(Icmd e){
-		
-		icmd=e;		
-	}
+
 	
 	
 	public void update(Object a) {
@@ -135,6 +132,25 @@ public class UIconsole extends JFrame implements Iobserver, KeyListener{
 	}
 	public void setrefreshCMD(Icmd e){		
 		refreshCMD=e;		
+	}
+
+
+
+
+	@Override
+	public void setaddCharCMD(Icmd addchar) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+
+	@Override
+	public void setBuffer(Ibuffer ib) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 

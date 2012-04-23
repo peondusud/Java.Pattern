@@ -22,6 +22,6 @@ public interface Ibuffer {
 	public void undo() ;
 	public void redo();
 	public void refresh();
-	
+	public void addchar();
 
 }
