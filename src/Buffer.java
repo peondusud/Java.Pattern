@@ -198,7 +198,6 @@ public  void cut() {
 	
 	@Override
 	public void saveInMemento() {
-		// TODO Auto-generated method stub
 		Memento a = new Memento(str);
 		this.care.addState(a);
 	}

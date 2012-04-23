@@ -19,7 +19,7 @@ import javax.swing.JPanel;
 
 public class UI extends JFrame implements Iobserver, KeyListener,MouseListener,IuI{
 	/**
-	 * 
+	 **XnL
 	 */
 	private static final long serialVersionUID = 1L;	
 				
@@ -58,7 +58,6 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener,I
 	     this.setVisible(false);
 	     f.setForeground(Color.BLACK);
 	     Font police = new Font("Century Gothic", Font.BOLD, 14); 	
-		 //container.setBackground(Color.white);
 	     f.setBackground(Color.BLACK);
 		 textArea.setFont(police);
 		 textArea.setEditable(false);	
@@ -194,7 +193,7 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener,I
 			 b=textArea.getSelectionEnd();
 			String tmp= Character.toString(arg0.getKeyChar());
 			 if( tmp.matches("[a-zA-Z0-9&é')(-è_çà$£§:;,ù%=<>²&#}{|`^]+") ){		//\p{Punct} essayer marche pas regex tout sauf control bouton
-			// buf.setStr(textArea.getText());
+				 //buf.setStr(textArea.getText());
 			 buf.setSelection(a,b);	
 			 buf.setaddchar(tmp);		    	
 			 addCharCMD.execute();
@@ -207,16 +206,13 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener,I
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {
-		//refreshCMD.execute();
-		
-		buf.notify_Obs();
+	
+		buf.notify_Obs();	//resolution bug affichage
 	}
 
 	@Override
 	public void keyTyped(KeyEvent arg0) {
 		
-		
-		//refreshCMD.execute();
 	}
 
 	@Override

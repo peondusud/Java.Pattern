@@ -74,11 +74,10 @@ public class UIconsole extends JFrame implements Iobserver, KeyListener,IuI{
 		if(a instanceof Ibuffer) 
 		{
 			Ibuffer b = (Ibuffer) a;
-			
+			textArea.setText("");
+			textArea.setText(b.getStr());
 			System.out.println(b.getStr()); 
 			System.out.println("     Presse Papier : **# "+ b.getPressP().getClip()+" #**");
-			
-			
 			
 		}
 		
@@ -88,7 +87,7 @@ public class UIconsole extends JFrame implements Iobserver, KeyListener,IuI{
 
 	@Override
 	public void keyPressed(KeyEvent arg0) {
-		// TODO Auto-generated method stub
+
 	}
 
 	@Override
@@ -103,7 +102,6 @@ public class UIconsole extends JFrame implements Iobserver, KeyListener,IuI{
 
 	@Override
 	public void keyTyped(KeyEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -134,22 +132,13 @@ public class UIconsole extends JFrame implements Iobserver, KeyListener,IuI{
 		refreshCMD=e;		
 	}
 
-
-
-
 	@Override
 	public void setaddCharCMD(Icmd addchar) {
-		// TODO Auto-generated method stub
-		
+			
 	}
 
-
-
-
-
 	@Override
-	public void setBuffer(Ibuffer ib) {
-		// TODO Auto-generated method stub
+	public void setBuffer(Ibuffer ib) {	
 		
 	}
 	

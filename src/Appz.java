@@ -5,7 +5,7 @@ public class Appz {
 
 	
 	public static void main(String[] args) {
-		if( args.equals("--guiconsole")){		//gui-console
+		if( args.equals("--guiconsole")){		//gui-console  args[0]
 			help();
 			Buffer buff = new Buffer();	
 			UIconsole gui = new UIconsole();
@@ -32,6 +32,7 @@ public class Appz {
 			gui.setBuffer(buff);
 		}
 		else if( args.equals("--console")){		//console
+			help();
 			Buffer buff = new Buffer();	
 			Icmd copy = new Copy(buff);//		
 			Icmd coller = new Coller(buff);//
@@ -51,8 +52,8 @@ public class Appz {
 		            	
 		        	   if( name.matches("^[select(]{7}[0-9]*[,][0-9]*[)]") ){  //regex select(digit,digit)
 		        		   
-		        		  String temp= name.substring("select(".length());
-		        		  StringTokenizer tokenizer = new StringTokenizer(temp,",");
+		        		  String temp= name.substring("select(".length());				
+		        		  StringTokenizer tokenizer = new StringTokenizer(temp,",");		//cut string @ ","
 		        		  int debu = Integer.valueOf(tokenizer.nextToken());
 		        		  String fin = tokenizer.nextToken();
 		        		  //buff.selection.select(debu, Integer.valueOf(fin.substring(0,fin.length()-1))); 	 
@@ -174,11 +175,9 @@ public class Appz {
 		gui.setrefreshCMD(refresh);
 		gui.setinsertCMD(insert);
 		gui.setaddCharCMD(addchar);
-		gui.setBuffer(buff);
+		gui.setBuffer(buff);	
 		
-	
-		}
-		
+		}		
 		
 	}
 	
@@ -192,8 +191,7 @@ public class Appz {
 		   System.out.println("redo() = redo");
 		   System.out.println("undo() = undo");
 		   System.out.println("enter() = retour ligne");
-		   System.out.println("del() = delete");
-		
+		   System.out.println("del() = delete");		
 	}
 
 	
