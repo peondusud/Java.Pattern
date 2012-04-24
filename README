@@ -1,0 +1,2 @@
+On peux lancer application soit en mode console(--console),soit en mode UIconsole(--guiconsole),soit en mode UI type notepad.
+j'ai essayé d’implémenter les pattern designer: command,memento,observer

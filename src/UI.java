@@ -162,8 +162,8 @@ public class UI extends JFrame implements Iobserver, KeyListener,MouseListener,I
 			textArea.setText(b.getStr());
 			textArea.setSelectionStart(b.getSelection().getDebut());		//maj SELECTEDselection
 			textArea.setSelectionEnd(b.getSelection().getFin());			//maj SELECTEDselection
-			System.out.println(b.getStr()); 
-			System.out.println("     Presse Papier : **# "+ b.getPressP().getClip()+" #**");
+			//System.out.println(b.getStr()); 
+			//System.out.println("     Presse Papier : **# "+ b.getPressP().getClip()+" #**");
 		
 		}
 		

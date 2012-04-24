@@ -130,13 +130,13 @@ public class Appz {
 		           }
 		           else if( name.startsWith("help(") && name.endsWith(")") ) {
 		        	   
-		        	   if( name.matches("^[help(]{4}[)]") ){
+		        	   if( name.matches("^[help(]{5}[)]") ){
 		        		   help();
 		        	   }	           
 		           }
 		           else if( name.startsWith("--help") ) {
 		        	   
-		        	   if( name.matches("^[help(]{4}[)]") ){
+		        	   if( name.matches("^[--help]{6}") ){
 		        		   help();
 		        	   }	           
 		           }
@@ -154,7 +154,8 @@ public class Appz {
 		else{
 									//GUI
 		Buffer buff = new Buffer();	
-		UI gui = new UI();	
+		UI gui = new UI();							//GUInotepad
+		//UIconsole gui = new UIconsole();			//GUIconsole
 		buff.add(gui);
 		gui.create();			
 		Icmd copy = new Copy(buff);//		

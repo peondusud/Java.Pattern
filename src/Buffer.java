@@ -117,9 +117,11 @@ public  void cut() {
 		selection.setFin(selection.getDebut());	//maj curseur
 		}
 		else{
+			if(selection.getDebut()!=0){			//remove bug delete on start
 			str=str.substring(0, selection.getDebut()-1) + str.substring(selection.getDebut() );
 			selection.setDebut(selection.getDebut()-1);
 			selection.setFin(selection.getDebut());		//maj curseur
+		}
 		}
 	
 		this.notify_Obs();
