@@ -1,0 +1,30 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_appz.html#a1952c2d3d8eca6373b054445803f2e88" title="Appz.help" alt="" coords="188,5,268,32"/>
+<area shape="rect" id="node5" href="$class_buffer.html#aff18015af9cbe667400bb1d86f5bbb5d" title="Buffer.add" alt="" coords="188,56,268,83"/>
+<area shape="rect" id="node7" href="$class_u_iconsole.html#a4a6205ceed18c0accd993ac1ef7782fc" title="UIconsole.create" alt="" coords="169,107,287,133"/>
+<area shape="rect" id="node9" href="$class_u_iconsole.html#a8895cdd250115852fb687deca38a9dbe" title="UIconsole.setcopyCMD" alt="" coords="149,157,307,184"/>
+<area shape="rect" id="node11" href="$class_u_iconsole.html#a1f35d091818606196d162dd1fa8ec254" title="UIconsole.setcollerCMD" alt="" coords="147,208,309,235"/>
+<area shape="rect" id="node13" href="$class_u_iconsole.html#a0c8f4ae6e9bcd08ca2821f7e5389be62" title="UIconsole.setdeleteCMD" alt="" coords="145,259,311,285"/>
+<area shape="rect" id="node15" href="$class_u_iconsole.html#aa8498281b9e364e2380b4c16d484edab" title="UIconsole.setundoCMD" alt="" coords="149,309,307,336"/>
+<area shape="rect" id="node17" href="$class_u_iconsole.html#a98ce80e8348f75ff4d31058c29c4f5a5" title="UIconsole.setredoCMD" alt="" coords="151,360,305,387"/>
+<area shape="rect" id="node19" href="$class_u_iconsole.html#a206bca5fe478235fe58ebab539f66768" title="UIconsole.setcutCMD" alt="" coords="154,411,302,437"/>
+<area shape="rect" id="node21" href="$class_u_iconsole.html#a792dda8cff2644f288dc43c8f088d174" title="UIconsole.setrefreshCMD" alt="" coords="143,461,313,488"/>
+<area shape="rect" id="node23" href="$class_u_iconsole.html#a3c1d4f00758a61c6f7b4486c96821fd5" title="UIconsole.setinsertCMD" alt="" coords="147,512,309,539"/>
+<area shape="rect" id="node25" href="$class_u_iconsole.html#ae6bd3625364bb81e5fb0febf9bb62efc" title="UIconsole.setaddCharCMD" alt="" coords="139,563,317,589"/>
+<area shape="rect" id="node27" href="$class_u_iconsole.html#a42dc572500d785dea9be0c7492356fbd" title="UIconsole.setBuffer" alt="" coords="161,613,295,640"/>
+<area shape="rect" id="node29" href="$class_buffer.html#abf0e51d539577ad9541a2f645a9617d0" title="Buffer.setSelection" alt="" coords="163,664,293,691"/>
+<area shape="rect" id="node31" href="$interface_icmd.html#a2d3e8b918d36fd6a0231ea444108a535" title="Icmd.execute" alt="" coords="366,791,466,817"/>
+<area shape="rect" id="node33" href="$class_buffer.html#ac50d99a40e51a0a44d8de201e0faea12" title="Buffer.setStr" alt="" coords="181,765,275,792"/>
+<area shape="rect" id="node35" href="$class_buffer.html#a639f48b37b83f6e3da6999b735ee795c" title="Buffer.getStr" alt="" coords="181,816,275,843"/>
+<area shape="rect" id="node37" href="$class_u_i.html#a6b48756271d1b4b87069ac34d0c4ff74" title="UI.create" alt="" coords="191,867,265,893"/>
+<area shape="rect" id="node40" href="$class_u_i.html#a23f1f3dbb004967bea6807a323066d7f" title="UI.setcopyCMD" alt="" coords="171,917,285,944"/>
+<area shape="rect" id="node42" href="$class_u_i.html#a001cbb072e7e0855ab65954538ba9563" title="UI.setcollerCMD" alt="" coords="170,968,286,995"/>
+<area shape="rect" id="node44" href="$class_u_i.html#ae962cbd8c1dfa3d934d86fc57acd170e" title="UI.setdeleteCMD" alt="" coords="168,1019,288,1045"/>
+<area shape="rect" id="node46" href="$class_u_i.html#aeb3d81d7caa02c3df14318c12f6e12bc" title="UI.setundoCMD" alt="" coords="171,1069,285,1096"/>
+<area shape="rect" id="node48" href="$class_u_i.html#a0d4c36c8cf904d2e1c9cf1cba3db931c" title="UI.setredoCMD" alt="" coords="173,1120,283,1147"/>
+<area shape="rect" id="node50" href="$class_u_i.html#a512ce0f27c339dceb268b38190aed078" title="UI.setcutCMD" alt="" coords="177,1171,279,1197"/>
+<area shape="rect" id="node52" href="$class_u_i.html#a5ab871f740ed7cfaf9862a0a290d1eae" title="UI.setrefreshCMD" alt="" coords="166,1221,290,1248"/>
+<area shape="rect" id="node54" href="$class_u_i.html#aa73b36903948cae4b76ecfbc3261b259" title="UI.setinsertCMD" alt="" coords="169,1272,287,1299"/>
+<area shape="rect" id="node56" href="$class_u_i.html#a9910494ef49ff941a506cde8df0cccc8" title="UI.setaddCharCMD" alt="" coords="161,1323,295,1349"/>
+<area shape="rect" id="node58" href="$class_u_i.html#af0f9deb1eafb529825a7d4e63af9895c" title="UI.setBuffer" alt="" coords="183,1373,273,1400"/>
+</map>

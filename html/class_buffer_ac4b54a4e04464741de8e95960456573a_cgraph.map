@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_caretaker.html#a64cd0956f32fc5acd08fb525578d1c50" title="Caretaker.addState" alt="" coords="145,5,279,32"/>
+<area shape="rect" id="node7" href="$class_selection.html#a4638b02776c4db9a4e7ab30bb7908acf" title="Selection.getDebut" alt="" coords="146,56,278,83"/>
+<area shape="rect" id="node9" href="$class_clipboard.html#a20de2a1b345d96034b43437b0baed632" title="Clipboard.getClip" alt="" coords="152,107,272,133"/>
+<area shape="rect" id="node11" href="$class_clipboard.html#a5e0a04129a9a178937176962050e1f91" title="Clipboard.setClip" alt="" coords="152,157,272,184"/>
+<area shape="rect" id="node13" href="$class_selection.html#ab0552e9fa5f967be22446f48ad5713d4" title="Selection.getFin" alt="" coords="154,208,270,235"/>
+<area shape="rect" id="node15" href="$class_buffer.html#a99206f17bd6f8db28a072a400e3618ac" title="Buffer.notify_Obs" alt="" coords="151,259,273,285"/>
+<area shape="rect" id="node5" href="$class_caretaker.html#a258a453b81251915387d17f3a2407c78" title="Caretaker.index" alt="" coords="329,5,442,32"/>
+</map>

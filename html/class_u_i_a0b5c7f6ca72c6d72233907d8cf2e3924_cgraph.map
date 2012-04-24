@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$interface_ibuffer.html#a6b75f1501aaa205cba63d11667a4a89c" title="Ibuffer.getStr" alt="" coords="150,5,245,32"/>
+<area shape="rect" id="node5" href="$interface_ibuffer.html#a74012c66abf9b23176e2b04cab2f0203" title="Ibuffer.getSelection" alt="" coords="131,56,263,83"/>
+<area shape="rect" id="node7" href="$class_selection.html#a4638b02776c4db9a4e7ab30bb7908acf" title="Selection.getDebut" alt="" coords="131,107,263,133"/>
+<area shape="rect" id="node9" href="$class_selection.html#ab0552e9fa5f967be22446f48ad5713d4" title="Selection.getFin" alt="" coords="139,157,255,184"/>
+</map>

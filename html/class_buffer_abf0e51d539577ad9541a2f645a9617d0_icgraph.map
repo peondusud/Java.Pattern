@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_appz.html#a4440c889e076c9ac964742a9ca8db93f" title="Appz.main" alt="" coords="218,5,302,32"/>
+<area shape="rect" id="node5" href="$class_u_i.html#a16ca76adc52f53e6064a9dc938e72cc1" title="UI.keyPressed" alt="" coords="207,56,313,83"/>
+<area shape="rect" id="node7" href="$class_u_i.html#ab0d44f501e2ee1b7458e4e26633c3b0f" title="UI.mouseReleased" alt="" coords="195,107,325,133"/>
+<area shape="rect" id="node9" href="$class_u_iconsole.html#ae3174c4f6c576750c437c1a2fdfcf007" title="UIconsole.keyPressed" alt="" coords="184,157,336,184"/>
+</map>

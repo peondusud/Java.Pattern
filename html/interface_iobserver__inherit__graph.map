@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_u_i.html" title="{UI\n||+ create()\l+ setcopyCMD()\l+ setcollerCMD()\l+ setcutCMD()\l+ setdeleteCMD()\l+ setundoCMD()\l+ setredoCMD()\l+ setinsertCMD()\l+ setrefreshCMD()\l+ setaddCharCMD()\land 9 more...}" alt="" coords="5,131,141,355"/>
+<area shape="rect" id="node5" href="$class_u_iconsole.html" title="{UIconsole\n||+ create()\l+ update()\l+ keyPressed()\l+ keyReleased()\l+ keyTyped()\l+ setcopyCMD()\l+ setcollerCMD()\l+ setcutCMD()\l+ setdeleteCMD()\l+ setundoCMD()\land 4 more...+ help()\l}" alt="" coords="166,131,308,355"/>
+</map>

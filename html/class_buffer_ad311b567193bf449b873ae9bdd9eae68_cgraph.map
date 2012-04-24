@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_caretaker.html#a64cd0956f32fc5acd08fb525578d1c50" title="Caretaker.addState" alt="" coords="142,5,277,32"/>
+<area shape="rect" id="node7" href="$class_buffer.html#a30f13fe44a2d3c8b9c68d5dc1e6d1abb" title="Buffer.restoreState" alt="" coords="144,56,275,83"/>
+<area shape="rect" id="node9" href="$class_caretaker.html#a79393da2288973b8c4b55caa70d1e04f" title="Caretaker.previous" alt="" coords="145,107,274,133"/>
+<area shape="rect" id="node11" href="$class_buffer.html#a99206f17bd6f8db28a072a400e3618ac" title="Buffer.notify_Obs" alt="" coords="149,157,270,184"/>
+<area shape="rect" id="node5" href="$class_caretaker.html#a258a453b81251915387d17f3a2407c78" title="Caretaker.index" alt="" coords="326,5,439,32"/>
+</map>

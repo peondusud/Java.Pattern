@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_add_char.html" title="{AddChar\n|~ ibuff\l|+ AddChar()\l+ execute()\l}" alt="" coords="5,131,96,223"/>
+<area shape="rect" id="node5" href="$class_coller.html" title="{Coller\n|~ ibuff\l|+ Coller()\l+ execute()\l}" alt="" coords="121,131,209,223"/>
+<area shape="rect" id="node7" href="$class_copy.html" title="{Copy\n|~ ibuff\l|+ Copy()\l+ execute()\l}" alt="" coords="233,131,321,223"/>
+<area shape="rect" id="node9" href="$class_cut.html" title="{Cut\n|~ ibuff\l|+ Cut()\l+ execute()\l}" alt="" coords="345,131,433,223"/>
+<area shape="rect" id="node11" href="$class_del.html" title="{Del\n|~ ibuff\l|+ Del()\l+ execute()\l}" alt="" coords="457,131,545,223"/>
+<area shape="rect" id="node13" href="$class_insert.html" title="{Insert\n|~ ibuff\l|+ Insert()\l+ execute()\l}" alt="" coords="569,131,657,223"/>
+<area shape="rect" id="node15" href="$class_refaire.html" title="{Refaire\n|~ ibuff\l|+ Refaire()\l+ execute()\l}" alt="" coords="681,131,769,223"/>
+<area shape="rect" id="node17" href="$class_refresh.html" title="{Refresh\n|~ ibuff\l|+ Refresh()\l+ execute()\l}" alt="" coords="793,131,881,223"/>
+<area shape="rect" id="node19" href="$class_undo.html" title="{Undo\n|~ ibuff\l|+ Undo()\l+ execute()\l}" alt="" coords="905,131,993,223"/>
+</map>

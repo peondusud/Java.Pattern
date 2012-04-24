@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node4" href="$interface_iobserver.html" title="{Iobserver\n||+ update()\l}" alt="" coords="94,79,175,156"/>
+<area shape="rect" id="node8" href="$interface_iu_i.html" title="{IuI\n||+ create()\l+ setcopyCMD()\l+ setcollerCMD()\l+ setdeleteCMD()\l+ setundoCMD()\l+ setredoCMD()\l+ setcutCMD()\l+ setrefreshCMD()\l+ setinsertCMD()\l+ setaddCharCMD()\l+ setBuffer()\l}" alt="" coords="315,5,452,229"/>
+</map>

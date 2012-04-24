@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$interface_icmd.html" title="Icmd" alt="" coords="5,208,56,235"/>
+<area shape="rect" id="node3" href="$class_add_char.html" title="AddChar" alt="" coords="104,5,176,32"/>
+<area shape="rect" id="node5" href="$class_coller.html" title="Coller" alt="" coords="113,56,167,83"/>
+<area shape="rect" id="node7" href="$class_copy.html" title="Copy" alt="" coords="114,107,166,133"/>
+<area shape="rect" id="node9" href="$class_cut.html" title="Cut" alt="" coords="119,157,161,184"/>
+<area shape="rect" id="node11" href="$class_del.html" title="Del" alt="" coords="119,208,161,235"/>
+<area shape="rect" id="node13" href="$class_insert.html" title="Insert" alt="" coords="113,259,167,285"/>
+<area shape="rect" id="node15" href="$class_refaire.html" title="Refaire" alt="" coords="109,309,171,336"/>
+<area shape="rect" id="node17" href="$class_refresh.html" title="Refresh" alt="" coords="107,360,173,387"/>
+<area shape="rect" id="node19" href="$class_undo.html" title="Undo" alt="" coords="114,411,166,437"/>
+</map>

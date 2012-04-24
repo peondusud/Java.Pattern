@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$interface_icmd.html" title="{Icmd\n||+ execute()\l}" alt="" coords="5,79,93,156"/>
+<area shape="rect" id="node4" href="$interface_ibuffer.html" title="{Ibuffer\n||+ getPressP()\l+ setPressP()\l+ getSelection()\l+ setSelection()\l+ getCare()\l+ setCare()\l+ getStr()\l+ setStr()\l+ add()\l+ del()\land 8 more...}" alt="" coords="117,5,232,229"/>
+</map>

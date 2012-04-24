@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$interface_isujet.html" title="{Isujet\n||+ add()\l+ del()\l}" alt="" coords="5,71,67,163"/>
+<area shape="rect" id="node4" href="$interface_ibuffer.html" title="{Ibuffer\n||+ getPressP()\l+ setPressP()\l+ getSelection()\l+ setSelection()\l+ getCare()\l+ setCare()\l+ getStr()\l+ setStr()\l+ add()\l+ del()\land 8 more...}" alt="" coords="92,5,207,229"/>
+<area shape="rect" id="node6" href="$interface_imemento.html" title="{Imemento\n||+ restoreFromMomento()\l+ saveInMemento()\l}" alt="" coords="231,71,397,163"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_buffer.html#a095c8305e81432029c453627600df4bb" title="Buffer.copy" alt="" coords="213,5,299,32"/>
+<area shape="rect" id="node5" href="$class_buffer.html#a0d253f757014cf53617791f0b3853989" title="Buffer.cut" alt="" coords="217,56,295,83"/>
+<area shape="rect" id="node7" href="$class_buffer.html#ac4b54a4e04464741de8e95960456573a" title="Buffer.coller" alt="" coords="211,107,301,133"/>
+<area shape="rect" id="node9" href="$class_buffer.html#ae4615f97496e2a5a8297949958db3fc0" title="Buffer.delete" alt="" coords="209,157,303,184"/>
+<area shape="rect" id="node11" href="$class_buffer.html#a6a9a07b53f2d292e00ba245891c23a62" title="Buffer.redo" alt="" coords="214,208,298,235"/>
+<area shape="rect" id="node13" href="$class_buffer.html#ad311b567193bf449b873ae9bdd9eae68" title="Buffer.undo" alt="" coords="213,259,299,285"/>
+<area shape="rect" id="node15" href="$class_buffer.html#a76e3aea609389583e3ec89ab3db9f79d" title="Buffer.insert" alt="" coords="211,309,301,336"/>
+<area shape="rect" id="node17" href="$class_buffer.html#a0b6458fd12e43f459c4c1cd97544b7cd" title="Buffer.refresh" alt="" coords="207,360,305,387"/>
+<area shape="rect" id="node19" href="$class_buffer.html#a880300058ee9a537fe8eeb04160ace35" title="Buffer.addchar" alt="" coords="203,411,309,437"/>
+<area shape="rect" id="node27" href="$class_u_i.html#afe95b9e648663f14012e06ebb9282ede" title="UI.keyReleased" alt="" coords="199,461,313,488"/>
+<area shape="rect" id="node29" href="$class_u_iconsole.html#a5b404b96fbdeb3ea89cfeebf98df1c90" title="UIconsole.keyReleased" alt="" coords="177,512,335,539"/>
+<area shape="rect" id="node21" href="$class_buffer.html#a5d7df1091bd3eae00283c148417fa662" title="Buffer.setaddchar" alt="" coords="384,411,507,437"/>
+<area shape="rect" id="node23" href="$class_u_i.html#a16ca76adc52f53e6064a9dc938e72cc1" title="UI.keyPressed" alt="" coords="577,385,684,412"/>
+<area shape="rect" id="node25" href="$class_u_iconsole.html#ae3174c4f6c576750c437c1a2fdfcf007" title="UIconsole.keyPressed" alt="" coords="555,436,707,463"/>
+</map>

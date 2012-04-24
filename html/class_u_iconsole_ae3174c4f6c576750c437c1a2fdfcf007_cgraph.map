@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_buffer.html#abf0e51d539577ad9541a2f645a9617d0" title="Buffer.setSelection" alt="" coords="205,5,336,32"/>
+<area shape="rect" id="node5" href="$interface_icmd.html#a2d3e8b918d36fd6a0231ea444108a535" title="Icmd.execute" alt="" coords="221,56,321,83"/>
+<area shape="rect" id="node7" href="$class_buffer.html#ac50d99a40e51a0a44d8de201e0faea12" title="Buffer.setStr" alt="" coords="223,107,318,133"/>
+<area shape="rect" id="node9" href="$class_buffer.html#a639f48b37b83f6e3da6999b735ee795c" title="Buffer.getStr" alt="" coords="223,157,318,184"/>
+<area shape="rect" id="node11" href="$class_u_iconsole.html#a08fdea5832d86b964070176a7decd8be" title="UIconsole.help" alt="" coords="217,208,324,235"/>
+<area shape="rect" id="node13" href="$class_buffer.html#a5d7df1091bd3eae00283c148417fa662" title="Buffer.setaddchar" alt="" coords="209,259,332,285"/>
+<area shape="rect" id="node15" href="$class_buffer.html#a880300058ee9a537fe8eeb04160ace35" title="Buffer.addchar" alt="" coords="385,259,490,285"/>
+<area shape="rect" id="node17" href="$class_caretaker.html#a64cd0956f32fc5acd08fb525578d1c50" title="Caretaker.addState" alt="" coords="539,132,674,159"/>
+<area shape="rect" id="node21" href="$class_selection.html#a4638b02776c4db9a4e7ab30bb7908acf" title="Selection.getDebut" alt="" coords="541,183,673,209"/>
+<area shape="rect" id="node23" href="$class_selection.html#ab0552e9fa5f967be22446f48ad5713d4" title="Selection.getFin" alt="" coords="549,233,665,260"/>
+<area shape="rect" id="node25" href="$class_selection.html#a8422a7971f454c3e0ea3aaf21dc100a3" title="Selection.setDebut" alt="" coords="541,284,673,311"/>
+<area shape="rect" id="node27" href="$class_selection.html#ad02ea4518205a8f00b6697a20a8999a9" title="Selection.setFin" alt="" coords="549,335,665,361"/>
+<area shape="rect" id="node29" href="$class_buffer.html#a99206f17bd6f8db28a072a400e3618ac" title="Buffer.notify_Obs" alt="" coords="546,385,667,412"/>
+<area shape="rect" id="node19" href="$class_caretaker.html#a258a453b81251915387d17f3a2407c78" title="Caretaker.index" alt="" coords="723,132,837,159"/>
+</map>

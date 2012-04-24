@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['saveinmemento',['saveInMemento',['../class_buffer.html#a55efea65c0b7f42e8b2eb7c739b87e5e',1,'Buffer.saveInMemento()'],['../interface_imemento.html#a8079c47f57807273fc0d5ba5edbda32a',1,'Imemento.saveInMemento()']]],
+  ['select',['select',['../class_selection.html#afe0046a63707a9e64bdead787823bf5f',1,'Selection.select(int a, int b)'],['../class_selection.html#a2cde5209206ab3bd12a826a57bb6b2cb',1,'Selection.select(int a)']]],
+  ['setaddchar',['setaddchar',['../class_buffer.html#a5d7df1091bd3eae00283c148417fa662',1,'Buffer']]],
+  ['setaddcharcmd',['setaddCharCMD',['../interface_iu_i.html#a213ac0ab61ea2e0575ee2f2078ecd390',1,'IuI.setaddCharCMD()'],['../class_u_i.html#a9910494ef49ff941a506cde8df0cccc8',1,'UI.setaddCharCMD()'],['../class_u_iconsole.html#ae6bd3625364bb81e5fb0febf9bb62efc',1,'UIconsole.setaddCharCMD()']]],
+  ['setbuffer',['setBuffer',['../interface_iu_i.html#a7f273815dd0f781c5c4a219cc57fad0b',1,'IuI.setBuffer()'],['../class_u_i.html#af0f9deb1eafb529825a7d4e63af9895c',1,'UI.setBuffer()'],['../class_u_iconsole.html#a42dc572500d785dea9be0c7492356fbd',1,'UIconsole.setBuffer()']]],
+  ['setcare',['setCare',['../class_buffer.html#a2c9cbb6165b8e63027df08282ba6c7ff',1,'Buffer.setCare()'],['../interface_ibuffer.html#a751f23de6c3f67b486cec571b1c481c9',1,'Ibuffer.setCare()']]],
+  ['setclip',['setClip',['../class_clipboard.html#a5e0a04129a9a178937176962050e1f91',1,'Clipboard']]],
+  ['setcollercmd',['setcollerCMD',['../interface_iu_i.html#a4fb83588b18a42995ca94b961a8326d2',1,'IuI.setcollerCMD()'],['../class_u_i.html#a001cbb072e7e0855ab65954538ba9563',1,'UI.setcollerCMD()'],['../class_u_iconsole.html#a1f35d091818606196d162dd1fa8ec254',1,'UIconsole.setcollerCMD()']]],
+  ['setcopycmd',['setcopyCMD',['../interface_iu_i.html#a9deebfbd0dd16f49bc54aeb35a403879',1,'IuI.setcopyCMD()'],['../class_u_i.html#a23f1f3dbb004967bea6807a323066d7f',1,'UI.setcopyCMD()'],['../class_u_iconsole.html#a8895cdd250115852fb687deca38a9dbe',1,'UIconsole.setcopyCMD()']]],
+  ['setcutcmd',['setcutCMD',['../interface_iu_i.html#ae764188de359b694c56e800b0167a531',1,'IuI.setcutCMD()'],['../class_u_i.html#a512ce0f27c339dceb268b38190aed078',1,'UI.setcutCMD()'],['../class_u_iconsole.html#a206bca5fe478235fe58ebab539f66768',1,'UIconsole.setcutCMD()']]],
+  ['setdebut',['setDebut',['../class_selection.html#a8422a7971f454c3e0ea3aaf21dc100a3',1,'Selection']]],
+  ['setdeletecmd',['setdeleteCMD',['../interface_iu_i.html#a3a01e04950525609c472543016b903ee',1,'IuI.setdeleteCMD()'],['../class_u_i.html#ae962cbd8c1dfa3d934d86fc57acd170e',1,'UI.setdeleteCMD()'],['../class_u_iconsole.html#a0c8f4ae6e9bcd08ca2821f7e5389be62',1,'UIconsole.setdeleteCMD()']]],
+  ['setfin',['setFin',['../class_selection.html#ad02ea4518205a8f00b6697a20a8999a9',1,'Selection']]],
+  ['setinsertcmd',['setinsertCMD',['../interface_iu_i.html#ae6a7a2310e8493da63ba1a1fc68ef9fe',1,'IuI.setinsertCMD()'],['../class_u_i.html#aa73b36903948cae4b76ecfbc3261b259',1,'UI.setinsertCMD()'],['../class_u_iconsole.html#a3c1d4f00758a61c6f7b4486c96821fd5',1,'UIconsole.setinsertCMD()']]],
+  ['setpressp',['setPressP',['../class_buffer.html#adeb4caed32b9360542c6a5680955af52',1,'Buffer.setPressP()'],['../interface_ibuffer.html#ab7afa315fced7763da1e4bc2ec5920b1',1,'Ibuffer.setPressP()']]],
+  ['setredocmd',['setredoCMD',['../interface_iu_i.html#ad68b25b88839729ada1189acd0fb3db9',1,'IuI.setredoCMD()'],['../class_u_i.html#a0d4c36c8cf904d2e1c9cf1cba3db931c',1,'UI.setredoCMD()'],['../class_u_iconsole.html#a98ce80e8348f75ff4d31058c29c4f5a5',1,'UIconsole.setredoCMD()']]],
+  ['setrefreshcmd',['setrefreshCMD',['../interface_iu_i.html#abacdbe2b0359aaa68e865828682ba65f',1,'IuI.setrefreshCMD()'],['../class_u_i.html#a5ab871f740ed7cfaf9862a0a290d1eae',1,'UI.setrefreshCMD()'],['../class_u_iconsole.html#a792dda8cff2644f288dc43c8f088d174',1,'UIconsole.setrefreshCMD()']]],
+  ['setselection',['setSelection',['../class_buffer.html#abf0e51d539577ad9541a2f645a9617d0',1,'Buffer.setSelection(Selection selectin)'],['../class_buffer.html#a1773767ee93539ef2593f4b209c0b30f',1,'Buffer.setSelection(int a, int b)'],['../interface_ibuffer.html#a7ed234cd06e63ce7667c0704c5136dec',1,'Ibuffer.setSelection()']]],
+  ['setstr',['setStr',['../class_buffer.html#ac50d99a40e51a0a44d8de201e0faea12',1,'Buffer.setStr()'],['../interface_ibuffer.html#ade0c6e6939128688f2a8acc3fa69161b',1,'Ibuffer.setStr()']]],
+  ['setundocmd',['setundoCMD',['../interface_iu_i.html#a0a92fd729025678e0f3d41b207b43a69',1,'IuI.setundoCMD()'],['../class_u_i.html#aeb3d81d7caa02c3df14318c12f6e12bc',1,'UI.setundoCMD()'],['../class_u_iconsole.html#aa8498281b9e364e2380b4c16d484edab',1,'UIconsole.setundoCMD()']]]
+];

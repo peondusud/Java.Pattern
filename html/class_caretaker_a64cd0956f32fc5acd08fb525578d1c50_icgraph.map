@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_buffer.html#a095c8305e81432029c453627600df4bb" title="Buffer.copy" alt="" coords="221,5,307,32"/>
+<area shape="rect" id="node5" href="$class_buffer.html#a0d253f757014cf53617791f0b3853989" title="Buffer.cut" alt="" coords="225,56,303,83"/>
+<area shape="rect" id="node7" href="$class_buffer.html#ac4b54a4e04464741de8e95960456573a" title="Buffer.coller" alt="" coords="219,107,309,133"/>
+<area shape="rect" id="node9" href="$class_buffer.html#ae4615f97496e2a5a8297949958db3fc0" title="Buffer.delete" alt="" coords="217,157,311,184"/>
+<area shape="rect" id="node11" href="$class_buffer.html#ad311b567193bf449b873ae9bdd9eae68" title="Buffer.undo" alt="" coords="221,208,307,235"/>
+<area shape="rect" id="node13" href="$class_buffer.html#a76e3aea609389583e3ec89ab3db9f79d" title="Buffer.insert" alt="" coords="219,259,309,285"/>
+<area shape="rect" id="node15" href="$class_buffer.html#a880300058ee9a537fe8eeb04160ace35" title="Buffer.addchar" alt="" coords="211,309,317,336"/>
+<area shape="rect" id="node23" href="$class_buffer.html#a55efea65c0b7f42e8b2eb7c739b87e5e" title="Buffer.saveInMemento" alt="" coords="189,360,339,387"/>
+<area shape="rect" id="node17" href="$class_buffer.html#a5d7df1091bd3eae00283c148417fa662" title="Buffer.setaddchar" alt="" coords="387,309,509,336"/>
+<area shape="rect" id="node19" href="$class_u_i.html#a16ca76adc52f53e6064a9dc938e72cc1" title="UI.keyPressed" alt="" coords="580,284,687,311"/>
+<area shape="rect" id="node21" href="$class_u_iconsole.html#ae3174c4f6c576750c437c1a2fdfcf007" title="UIconsole.keyPressed" alt="" coords="557,335,709,361"/>
+</map>

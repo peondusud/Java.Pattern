@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_buffer.html#ae4615f97496e2a5a8297949958db3fc0" title="Buffer.delete" alt="" coords="189,5,283,32"/>
+<area shape="rect" id="node5" href="$class_buffer.html#a880300058ee9a537fe8eeb04160ace35" title="Buffer.addchar" alt="" coords="183,56,289,83"/>
+<area shape="rect" id="node13" href="$class_buffer.html#a1773767ee93539ef2593f4b209c0b30f" title="Buffer.setSelection" alt="" coords="171,107,301,133"/>
+<area shape="rect" id="node7" href="$class_buffer.html#a5d7df1091bd3eae00283c148417fa662" title="Buffer.setaddchar" alt="" coords="349,56,472,83"/>
+<area shape="rect" id="node9" href="$class_u_i.html#a16ca76adc52f53e6064a9dc938e72cc1" title="UI.keyPressed" alt="" coords="543,31,649,57"/>
+<area shape="rect" id="node11" href="$class_u_iconsole.html#ae3174c4f6c576750c437c1a2fdfcf007" title="UIconsole.keyPressed" alt="" coords="520,81,672,108"/>
+</map>
